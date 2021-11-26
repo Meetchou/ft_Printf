@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kamanfo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/26 12:58:08 by kamanfo           #+#    #+#             */
-/*   Updated: 2021/11/26 14:55:23 by kamanfo          ###   ########.fr       */
+/*   Created: 2021/11/22 14:08:47 by kamanfo           #+#    #+#             */
+/*   Updated: 2021/11/22 14:08:49 by kamanfo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int ft_printf(const char *format, ...)
+void	ft_putnbr(int n)
 {
-	int	i;
-	int	count;
-	va_list param;
+	long long int	nb;
 
-	va_start(param, format);
-	i = 0;
-	count = 0;
-	while (format[i])
+	nb = n;
+	if (nb < 0)
 	{
-		if (format[i] == '%')
-		{
-			count += ft_threat_conv(format, param, i++);
-		}
+		ft_putchar('-');
+		nb = -nb;
 	}
+	if (nb > 9)
+	{
+		ft_putnbr(nb / 10);
+		ft_putchar((nb % 10) + '0');
+	}
+	else
+		ft_putchar(nb + '0');
 }
-

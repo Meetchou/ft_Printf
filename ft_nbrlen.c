@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kamanfo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/26 12:58:08 by kamanfo           #+#    #+#             */
-/*   Updated: 2021/11/26 14:55:23 by kamanfo          ###   ########.fr       */
+/*   Created: 2021/11/22 14:06:55 by kamanfo           #+#    #+#             */
+/*   Updated: 2021/11/23 11:00:21 by kamanfo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int ft_printf(const char *format, ...)
+int	ft_nbrlen(int nb)
 {
-	int	i;
-	int	count;
-	va_list param;
-
-	va_start(param, format);
-	i = 0;
-	count = 0;
-	while (format[i])
-	{
-		if (format[i] == '%')
-		{
-			count += ft_threat_conv(format, param, i++);
-		}
-	}
+	if (nb == -2147483648)
+		return (11);
+	if (nb < 0)
+		return (1 + ft_nbrlen(-nb));
+	if (nb > 9)
+		return (1 + ft_nbrlen(nb / 10));
+	return (1);
 }
-
