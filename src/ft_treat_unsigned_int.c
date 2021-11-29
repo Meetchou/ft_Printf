@@ -6,7 +6,7 @@
 /*   By: kamanfo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 16:19:32 by kamanfo           #+#    #+#             */
-/*   Updated: 2021/11/26 16:50:50 by kamanfo          ###   ########.fr       */
+/*   Updated: 2021/11/29 13:57:18 by kamanfo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ void	ft_put_unsigned_nbr(unsigned int n)
 
 int	ft_unsigned_nbrlen(unsigned int nb)
 {
-	if (nb < 0)
-		return (1 + ft_nbrlen(-nb));
 	if (nb > 9)
 		return (1 + ft_nbrlen(nb / 10));
 	return (1);
