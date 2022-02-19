@@ -6,7 +6,7 @@
 /*   By: kamanfo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 16:43:26 by kamanfo           #+#    #+#             */
-/*   Updated: 2021/11/26 16:44:44 by kamanfo          ###   ########.fr       */
+/*   Updated: 2021/12/01 13:31:55 by kamanfo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 int	ft_treat_hexa(char c, va_list param)
 {
-	char		*base;
+	char			*base;
 	unsigned int	nb;
+
 	if (c == 'x')
 		base = "0123456789abcdef";
 	else
@@ -24,4 +25,3 @@ int	ft_treat_hexa(char c, va_list param)
 	ft_convert_hexa(nb, base);
 	return (ft_hexa_nbrlen(nb));
 }
-

@@ -27,11 +27,9 @@ int	ft_treat_conv(char *format, va_list param, int i)
 		count += ft_treat_int(param);
 	else if (format[i] == 'u')
 		count += ft_treat_unsigned_int(param);
-	else if (format[i] == 'x'|| format[i] == 'X')
+	else if (format[i] == 'x' || format[i] == 'X')
 		count += ft_treat_hexa(format[i], param);
 	else if (format[i] == '%')
 		count += write(1, "%", 1);
 	return (count);
 }
-
-

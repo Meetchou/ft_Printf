@@ -14,10 +14,9 @@
 
 int	ft_treat_int(va_list param)
 {
-	int nb;
+	int	nb;
 
 	nb = va_arg(param, int);
 	ft_putnbr(nb);
 	return (ft_nbrlen(nb));
 }
-

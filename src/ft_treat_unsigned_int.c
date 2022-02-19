@@ -6,7 +6,7 @@
 /*   By: kamanfo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 16:19:32 by kamanfo           #+#    #+#             */
-/*   Updated: 2021/11/29 13:57:18 by kamanfo          ###   ########.fr       */
+/*   Updated: 2021/12/01 13:32:46 by kamanfo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,9 @@ int	ft_unsigned_nbrlen(unsigned int nb)
 
 int	ft_treat_unsigned_int(va_list param)
 {
-	unsigned int nb;
+	unsigned int	nb;
 
 	nb = va_arg(param, unsigned int);
 	ft_put_unsigned_nbr(nb);
 	return (ft_unsigned_nbrlen(nb));
 }
-

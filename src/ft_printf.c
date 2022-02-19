@@ -14,9 +14,9 @@
 
 int	ft_printf(const char *format, ...)
 {
-	int	i;
-	int	count;
-	va_list param;
+	int		i;
+	int		count;
+	va_list	param;
 
 	va_start(param, format);
 	i = 0;
@@ -35,4 +35,3 @@ int	ft_printf(const char *format, ...)
 	}
 	return (count);
 }
-

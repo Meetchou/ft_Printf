@@ -14,11 +14,10 @@
 
 int	ft_treat_string(va_list param)
 {
-	char *str;
+	char	*str;
 
 	str = va_arg(param, char *);
 	if (str == NULL)
 		return (write(1, "(null)", 6));
 	return (write(1, str, ft_strlen(str)));
 }
-

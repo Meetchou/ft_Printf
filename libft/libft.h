@@ -6,7 +6,7 @@
 /*   By: kamanfo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:05:35 by kamanfo           #+#    #+#             */
-/*   Updated: 2021/11/26 13:02:07 by kamanfo          ###   ########.fr       */
+/*   Updated: 2021/12/01 13:36:54 by kamanfo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putnbr(int n);
-int	ft_nbrlen(int nb);
+int		ft_nbrlen(int nb);
 void	ft_putchar(char c);
 
 #endif
